@@ -2,18 +2,18 @@ package com.ontology.utilization.domain.representation;
 
 public class Range {
 
-	private int form;
+	private int from;
 	private int to;
 
 	public Range() {
 	}
 
-	public int getForm() {
-		return form;
+	public int getFrom() {
+		return from;
 	}
 
-	public void setForm(int form) {
-		this.form = form;
+	public void setFrom(int from) {
+		this.from = from;
 	}
 
 	public int getTo() {
@@ -26,7 +26,7 @@ public class Range {
 
 	@Override
 	public String toString() {
-		return "r - from: " + form + " to: " + to;
+		return "r - from: " + from + " to: " + to;
 	}
 
 }

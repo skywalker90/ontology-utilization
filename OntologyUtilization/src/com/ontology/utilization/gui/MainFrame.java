@@ -12,7 +12,7 @@ public class MainFrame extends JFrame {
 
 	public MainFrame() {
 		setVisible(true);
-		setSize(new Dimension(500, 500));
+		setSize(new Dimension(1000, 500));
 		initLookAndFeel();
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 

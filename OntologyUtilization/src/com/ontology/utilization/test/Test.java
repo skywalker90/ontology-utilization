@@ -5,28 +5,31 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
+import com.hp.hpl.jena.rdf.model.Model;
 import com.ontology.utilization.domain.BooleanPatient;
 import com.ontology.utilization.domain.genetic.algorithm.BooleanGeneticAlgorithm;
 import com.ontology.utilization.domain.genetic.algorithm.crossover.BooleanCrossover;
 import com.ontology.utilization.domain.genetic.algorithm.crossover.TwoPointBooleanCrossover;
 import com.ontology.utilization.domain.genetic.algorithm.environment.BooleanEnvironment;
 import com.ontology.utilization.domain.genetic.algorithm.estimate.BooleanBinaryEstimate;
-import com.ontology.utilization.domain.genetic.algorithm.handler.ShowAlgorithmHandler;
 import com.ontology.utilization.domain.genetic.algorithm.handler.AlgorithmHandler;
+import com.ontology.utilization.domain.genetic.algorithm.handler.ShowAlgorithmHandler;
 import com.ontology.utilization.domain.genetic.algorithm.mutation.BooleanMutation;
 import com.ontology.utilization.domain.genetic.algorithm.mutation.MultiPointBooleanMutation;
 import com.ontology.utilization.domain.genetic.algorithm.selection.BooleanRouletteSelection;
 import com.ontology.utilization.domain.genetic.algorithm.selection.BooleanSelection;
 import com.ontology.utilization.factory.BooleanPatientFactory;
+import com.ontology.utilization.generator.OntologyGenerator;
+import com.ontology.utilization.generator.components.BreastCancerAttribute;
+import com.ontology.utilization.generator.components.BreastCancerAttributeRange;
 import com.ontology.utilization.parser.dataset.FileDatasetParser;
 import com.ontology.utilization.parser.dataset.model.Dataset;
-import com.sun.xml.internal.messaging.saaj.packaging.mime.Header;
 
 public class Test {
 
 	public static void main(String[] args) {
 
-		/** OBS£UGA PARSOWANIA PLIKU */
+		/** OBSï¿½UGA PARSOWANIA PLIKU */
 
 		File f = new File("breast-cancer-wisconsin.data");
 		FileDatasetParser fDP = new FileDatasetParser(f);
@@ -43,7 +46,7 @@ public class Test {
 				.producePatient(dataset.getDataset());
 
 		/*** INICJALIZACJA ZMIENNYCH ***/
-		// DO ANALIZOWANIA I ŒLEDZENIA CO DZIEJE SIE W ALGORYTMIE
+		// DO ANALIZOWANIA I ï¿½LEDZENIA CO DZIEJE SIE W ALGORYTMIE
 		AlgorithmHandler handler = new ShowAlgorithmHandler();
 
 		BooleanEnvironment environment = new BooleanEnvironment(true, 100, 51,
@@ -57,7 +60,7 @@ public class Test {
 		BooleanCrossover crossover = new TwoPointBooleanCrossover(
 				environment.getProbabilityOfCrossover(), null);
 		/*
-		 * CZTERY MO¯LIWOŒCI BooleanCrossover crossover = new
+		 * CZTERY MOï¿½LIWOï¿½CI BooleanCrossover crossover = new
 		 * TwoPointBooleanCrossover( environment.getProbabilityOfCrossover(),
 		 * null); BooleanCrossover crossover = new TwoPointBooleanCrossover(
 		 * environment.getProbabilityOfCrossover(), estimate); BooleanCrossover
@@ -70,7 +73,7 @@ public class Test {
 		BooleanMutation mutation = new MultiPointBooleanMutation(
 				environment.getProbabilityOfMutation(), estimate);
 		/*
-		 * CZTERY MO¯LIWOŒCI BooleanMutation mutation = new
+		 * CZTERY MOï¿½LIWOï¿½CI BooleanMutation mutation = new
 		 * MultiPointBooleanMutation( environment.getProbabilityOfMutation(),
 		 * estimate); BooleanMutation mutation = new MultiPointBooleanMutation(
 		 * environment.getProbabilityOfMutation(), null); BooleanMutation
@@ -96,6 +99,30 @@ public class Test {
 		// METODA DO STOPOWANIA ALGORYTMU
 		handler.stopAlgorithm();
 
+		// TODO check cast.
+//		@SuppressWarnings("unchecked")
+//		List<BreastCancerAttribute> representation = (List<BreastCancerAttribute>) handler
+//				.getBestBooleanChromosomeRepresentation(
+//						handler.getBestChromosome(),
+//						environment.getIsMalignatRule());
+//		System.out.println("\n\n=====================\n");
+//		for (BreastCancerAttribute att : representation) {
+//			for (BreastCancerAttributeRange r : att.getRanges()) {
+//				System.out.println(r.getRangePrefix() + "_"
+//						+ att.getAttributeName() + " - describes "
+//						+ r.getCancerType().getValue());
+//			}
+//		}
+//		
+//		System.out.println("\n\n=====================\n");
+//		
+//		OntologyGenerator generator = new OntologyGenerator();
+//		
+//		Model model = generator.generateOntology(representation);
+//		
+//		
+//		//System.out.println(model.);
+//		model.write(System.out);
 	}
 
 }

@@ -121,7 +121,7 @@ public class BooleanChromosome extends Chromosome<BooleanChromosome> {
 					end_x = y;
 					isPattern = true;
 				} else if (next == false && isPattern == true) {
-					range.setForm(start_x);
+					range.setFrom(start_x);
 					range.setTo(end_x);
 					ruleRepresentation.addRangeToClassifier(i, range);
 					range = null;
@@ -130,7 +130,7 @@ public class BooleanChromosome extends Chromosome<BooleanChromosome> {
 			}
 
 			if (next = true && isPattern == true) {
-				range.setForm(start_x);
+				range.setFrom(start_x);
 				range.setTo(end_x);
 				ruleRepresentation.addRangeToClassifier(i, range);
 			}
