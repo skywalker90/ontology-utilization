@@ -1,4 +1,4 @@
-package com.ontology.utilization.gui;
+package com.ontology.utilization.gui.view;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -11,15 +11,22 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import com.ontology.utilization.domain.genetic.algorithm.BooleanGeneticAlgorithm;
+import com.ontology.utilization.gui.ChartsAlgorithmHandler;
+import com.ontology.utilization.gui.MainFrame;
 import com.ontology.utilization.gui.controller.DefaultController;
 import com.ontology.utilization.gui.model.BooleanEnvironmentModel;
-import com.ontology.utilization.gui.view.BooleanEnvironmentViewPanel;
 
-public class MainPanel extends JPanel {
+public class GeneticAlgorithmViewPanel extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private BooleanEnvironmentModel model;
 	private ChartsAlgorithmHandler chartsAlgorithmHandler;
+	private MainFrame mainFrame;
 
-	public MainPanel() {
+	public GeneticAlgorithmViewPanel(MainFrame mainFrame) {
+		this.mainFrame = mainFrame;
 		init();
 	}
 
@@ -66,15 +73,18 @@ public class MainPanel extends JPanel {
 		JPanel controllPanel = new JPanel();
 		final JButton startButton = new JButton("Start");
 		final JButton stopButton = new JButton("Stop");
+		final JButton nextButton = new JButton("Dalej");
 		controllPanel.add(startButton);
 		controllPanel.add(stopButton);
+		controllPanel.add(nextButton);
+		nextButton.setEnabled(false);
 		stopButton.setEnabled(false);
 		startButton.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				if (model.getPatients() == null || model.getPatients().size() == 0) {
-					JOptionPane.showMessageDialog(MainPanel.this, "Wybierz plik z danymi pacjentów", "B³¹d", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(GeneticAlgorithmViewPanel.this, "Wybierz plik z danymi pacjentów", "B³¹d", JOptionPane.ERROR_MESSAGE);
 				} else {
 					startButton.setEnabled(false);
 					stopButton.setEnabled(true);
@@ -85,8 +95,12 @@ public class MainPanel extends JPanel {
 						@Override
 						public void run() {
 							algorithm.run();
+							if (!chartsAlgorithmHandler.isTerminated()) {
+								createOntologyGeneratorPanel();
+							}
 							startButton.setEnabled(true);
 							stopButton.setEnabled(false);
+							nextButton.setEnabled(true);
 						}
 					};
 					Executors.newSingleThreadExecutor().execute(runnable);
@@ -101,8 +115,18 @@ public class MainPanel extends JPanel {
 				stopButton.setEnabled(false);
 				chartsAlgorithmHandler.stopAlgorithm();
 				startButton.setEnabled(true);
+				nextButton.setEnabled(true);
 			}
 		});
+
+		nextButton.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				createOntologyGeneratorPanel();
+			}
+		});
+
 		GridBagConstraints c = new GridBagConstraints();
 		c.fill = GridBagConstraints.BOTH;
 		c.gridx = 0;
@@ -111,5 +135,12 @@ public class MainPanel extends JPanel {
 		c.weightx = 1. / 4.;
 
 		this.add(controllPanel, c);
+	}
+
+	private void createOntologyGeneratorPanel() {
+		if (chartsAlgorithmHandler.getBestBooleanChromosome() != null) {
+			mainFrame.setOntologyViewPanel(new OntologyViewPanel(mainFrame, model.isMalignatRule(), chartsAlgorithmHandler.getBestBooleanChromosome()));
+			mainFrame.changeToOntologyPanel();
+		}
 	}
 }

@@ -10,8 +10,8 @@ import com.ontology.utilization.gui.view.AbstractViewPanel;
 
 public abstract class AbstractController implements PropertyChangeListener {
 
-	private ArrayList<AbstractViewPanel> registeredViews;
-	private ArrayList<AbstractModel> registeredModels;
+	protected ArrayList<AbstractViewPanel> registeredViews;
+	protected ArrayList<AbstractModel> registeredModels;
 
 	public AbstractController() {
 		registeredViews = new ArrayList<AbstractViewPanel>();

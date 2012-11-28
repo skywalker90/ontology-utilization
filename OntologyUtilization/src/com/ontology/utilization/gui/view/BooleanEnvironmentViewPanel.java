@@ -34,6 +34,10 @@ import com.ontology.utilization.parser.dataset.FileDatasetParser;
 import com.ontology.utilization.parser.dataset.model.Dataset;
 
 public class BooleanEnvironmentViewPanel extends AbstractViewPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4981338238615668404L;
 	private final JButton patiensButton = new JButton("Wczytaj pacjentów");
 	private final JLabel patiensCountLabel = new JLabel("Iloœæ pacjentów = 0");
 	private final JCheckBox isMalignatRuleCheckBox = new JCheckBox("Z³oœliwa zasada?");
@@ -57,6 +61,7 @@ public class BooleanEnvironmentViewPanel extends AbstractViewPanel {
 	private final JTextField thresholdTextField = new JTextField(5);
 	private final JComboBox mutationMethodComboBox = new JComboBox(Mutation.BOOLEAN_MUTATIONS);
 	private final JComboBox crossoverMethodComboBox = new JComboBox(Crossover.BOOLEAN_CROSSOVERS);
+	private final JButton resetDefaultButton = new JButton("Domyœlne wartoœci");
 
 	private DefaultController controller;
 
@@ -103,7 +108,7 @@ public class BooleanEnvironmentViewPanel extends AbstractViewPanel {
 		addLabel(iterationLabel, ++gridy);
 		addTextField(iterationTextField, gridy);
 		addSlider(iterationSlider, ++gridy);
-
+		addCenterComponent(resetDefaultButton, ++gridy);
 		addListeners();
 	}
 
@@ -265,6 +270,13 @@ public class BooleanEnvironmentViewPanel extends AbstractViewPanel {
 				}
 			}
 		});
+		
+		resetDefaultButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				controller.initDefault();
+			}
+		});
 	}
 
 	private void addTextField(JTextField textField, int gridy) {
@@ -326,7 +338,6 @@ public class BooleanEnvironmentViewPanel extends AbstractViewPanel {
 		} else if (evt.getPropertyName().equals(DefaultController.ELEMENT_sizeOfInitialPopulationMin_PROPERTY)) {
 			sizeOfInitialPopulationSlider.setMinimum((Integer) evt.getNewValue());
 		} else if (evt.getPropertyName().equals(DefaultController.ELEMENT_sizeOfStandardPopulation_PROPERTY)) {
-			System.out.println("nana");
 			sizeOfStandardPopulationSlider.setValue((Integer) evt.getNewValue());
 			sizeOfStandardPopulationTextField.setText(evt.getNewValue().toString());
 		} else if (evt.getPropertyName().equals(DefaultController.ELEMENT_sizeOfStandardPopulationMax_PROPERTY)) {

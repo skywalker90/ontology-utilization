@@ -3,6 +3,8 @@ package com.ontology.utilization.gui.controller;
 import java.util.List;
 
 import com.ontology.utilization.domain.BooleanPatient;
+import com.ontology.utilization.gui.model.AbstractModel;
+import com.ontology.utilization.gui.model.BooleanEnvironmentModel;
 
 public class DefaultController extends AbstractController {
 	public final static String ELEMENT_patients_PROPERTY = "Patients";
@@ -116,5 +118,13 @@ public class DefaultController extends AbstractController {
 
 	public void changeElementIterationMax(int newIterationMax) {
 		setModelProperty(ELEMENT_iterationMax_PROPERTY, newIterationMax);
+	}
+	
+	public void initDefault(){
+		for(AbstractModel model : registeredModels){
+			if(model instanceof BooleanEnvironmentModel){
+				BooleanEnvironmentModel.class.cast(model).initDefaults();
+			}
+		}
 	}
 }

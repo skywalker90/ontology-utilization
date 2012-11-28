@@ -18,6 +18,7 @@ public class ChartsAlgorithmHandler extends AlgorithmHandler {
 	private final XYSeries avgXYSeries;
 	private final XYSeries bestXYSeries;
 	private int currentX;
+	private BooleanChromosome bestBooleanChromosome;
 
 	public ChartsAlgorithmHandler() {
 		avgXYSeries = new XYSeries("Œrednia");
@@ -25,7 +26,7 @@ public class ChartsAlgorithmHandler extends AlgorithmHandler {
 		final XYSeriesCollection seriesCollection = new XYSeriesCollection();
 		seriesCollection.addSeries(avgXYSeries);
 		seriesCollection.addSeries(bestXYSeries);
-		JFreeChart chart = ChartFactory.createXYLineChart("tytu³", "Numer pokolenia", "Ocena", seriesCollection, PlotOrientation.VERTICAL, true, true, false);
+		JFreeChart chart = ChartFactory.createXYLineChart("Algorytm genetyczny", "Numer pokolenia", "Ocena", seriesCollection, PlotOrientation.VERTICAL, true, true, false);
 		chartPanel = new ChartPanel(chart);
 	}
 
@@ -57,7 +58,10 @@ public class ChartsAlgorithmHandler extends AlgorithmHandler {
 
 	@Override
 	public void appendBestBooleanChromosome(BooleanChromosome bestBooleanChromosome) {
-		System.out.println("appendBestRuleRepresentation");
-		System.out.println(bestBooleanChromosome);
+		this.bestBooleanChromosome = bestBooleanChromosome;
+	}
+
+	public BooleanChromosome getBestBooleanChromosome() {
+		return bestBooleanChromosome;
 	}
 }

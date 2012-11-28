@@ -1,0 +1,711 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://breast-cancer.com/"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+  <rdf:Description rdf:about="http://breast-cancer.com/BreastCancer">
+    <vcard:CLASS>
+      <rdf:Description rdf:about="http://breast-cancer.com/Breast Cancer">
+        <j.0:Subclass>
+          <rdf:Description rdf:about="http://breast-cancer.com/Malignant">
+            <j.0:Subsumption>
+              <rdf:Description rdf:about="http://breast-cancer.com/Mitoses-Malignant">
+                <j.0:And>
+                  <rdf:Description rdf:about="http://breast-cancer.com/Uniformity of Cell Size-Malignant">
+                    <j.0:Subsumption>
+                      <rdf:Description rdf:about="http://breast-cancer.com/2_2-Uniformity of Cell Size">
+                        <j.0:Or>
+                          <rdf:Description rdf:about="http://breast-cancer.com/7_7-Uniformity of Cell Size">
+                            <j.0:Or rdf:resource="http://breast-cancer.com/2_2-Uniformity of Cell Size"/>
+                            <j.0:Or>
+                              <rdf:Description rdf:about="http://breast-cancer.com/9_9-Uniformity of Cell Size">
+                                <j.0:Or rdf:resource="http://breast-cancer.com/2_2-Uniformity of Cell Size"/>
+                                <j.0:Or rdf:resource="http://breast-cancer.com/7_7-Uniformity of Cell Size"/>
+                                <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                >9</j.0:To>
+                                <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                >9</j.0:From>
+                              </rdf:Description>
+                            </j.0:Or>
+                            <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >7</j.0:To>
+                            <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >7</j.0:From>
+                          </rdf:Description>
+                        </j.0:Or>
+                        <j.0:Or rdf:resource="http://breast-cancer.com/9_9-Uniformity of Cell Size"/>
+                        <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >2</j.0:To>
+                        <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >2</j.0:From>
+                      </rdf:Description>
+                    </j.0:Subsumption>
+                    <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Malignant"/>
+                    <j.0:Subsumption rdf:resource="http://breast-cancer.com/9_9-Uniformity of Cell Size"/>
+                    <j.0:And>
+                      <rdf:Description rdf:about="http://breast-cancer.com/Single Epithelial Cell Size-Malignant">
+                        <j.0:And>
+                          <rdf:Description rdf:about="http://breast-cancer.com/Clump Thickness-Malignant">
+                            <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Malignant"/>
+                            <j.0:Subsumption>
+                              <rdf:Description rdf:about="http://breast-cancer.com/7_7-Clump Thickness">
+                                <j.0:Or>
+                                  <rdf:Description rdf:about="http://breast-cancer.com/2_2-Clump Thickness">
+                                    <j.0:Or rdf:resource="http://breast-cancer.com/7_7-Clump Thickness"/>
+                                    <j.0:Or>
+                                      <rdf:Description rdf:about="http://breast-cancer.com/9_9-Clump Thickness">
+                                        <j.0:Or rdf:resource="http://breast-cancer.com/2_2-Clump Thickness"/>
+                                        <j.0:Or rdf:resource="http://breast-cancer.com/7_7-Clump Thickness"/>
+                                        <j.0:To rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#int"
+                                        >9</j.0:To>
+                                        <j.0:From rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#int"
+                                        >9</j.0:From>
+                                      </rdf:Description>
+                                    </j.0:Or>
+                                    <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                    >2</j.0:To>
+                                    <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                    >2</j.0:From>
+                                  </rdf:Description>
+                                </j.0:Or>
+                                <j.0:Or rdf:resource="http://breast-cancer.com/9_9-Clump Thickness"/>
+                                <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                >7</j.0:To>
+                                <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                >7</j.0:From>
+                              </rdf:Description>
+                            </j.0:Subsumption>
+                            <j.0:Subsumption rdf:resource="http://breast-cancer.com/9_9-Clump Thickness"/>
+                            <j.0:And>
+                              <rdf:Description rdf:about="http://breast-cancer.com/Uniformity of Cell Shape-Malignant">
+                                <j.0:And rdf:resource="http://breast-cancer.com/Clump Thickness-Malignant"/>
+                                <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Malignant"/>
+                                <j.0:And>
+                                  <rdf:Description rdf:about="http://breast-cancer.com/Marginal Adhesion-Malignant">
+                                    <j.0:And rdf:resource="http://breast-cancer.com/Clump Thickness-Malignant"/>
+                                    <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Malignant"/>
+                                    <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Malignant"/>
+                                    <j.0:And rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Malignant"/>
+                                    <j.0:And>
+                                      <rdf:Description rdf:about="http://breast-cancer.com/Bare Nuclei-Malignant">
+                                        <j.0:Subsumption>
+                                          <rdf:Description rdf:about="http://breast-cancer.com/2_2-Bare Nuclei">
+                                            <j.0:Or>
+                                              <rdf:Description rdf:about="http://breast-cancer.com/6_6-Bare Nuclei">
+                                                <j.0:Or rdf:resource="http://breast-cancer.com/2_2-Bare Nuclei"/>
+                                                <j.0:To rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#int"
+                                                >6</j.0:To>
+                                                <j.0:From rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#int"
+                                                >6</j.0:From>
+                                              </rdf:Description>
+                                            </j.0:Or>
+                                            <j.0:To rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#int"
+                                            >2</j.0:To>
+                                            <j.0:From rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#int"
+                                            >2</j.0:From>
+                                          </rdf:Description>
+                                        </j.0:Subsumption>
+                                        <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Malignant"/>
+                                        <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Malignant"/>
+                                        <j.0:And rdf:resource="http://breast-cancer.com/Marginal Adhesion-Malignant"/>
+                                        <j.0:Subsumption rdf:resource="http://breast-cancer.com/6_6-Bare Nuclei"/>
+                                        <j.0:And rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Malignant"/>
+                                        <j.0:And>
+                                          <rdf:Description rdf:about="http://breast-cancer.com/Normal Nucleoli-Malignant">
+                                            <j.0:And rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Malignant"/>
+                                            <j.0:And rdf:resource="http://breast-cancer.com/Bare Nuclei-Malignant"/>
+                                            <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Malignant"/>
+                                            <j.0:And rdf:resource="http://breast-cancer.com/Marginal Adhesion-Malignant"/>
+                                            <j.0:And rdf:resource="http://breast-cancer.com/Clump Thickness-Malignant"/>
+                                            <j.0:And>
+                                              <rdf:Description rdf:about="http://breast-cancer.com/Bland Chromatin-Malignant">
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Malignant"/>
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Malignant"/>
+                                                <j.0:Subsumption>
+                                                  <rdf:Description rdf:about="http://breast-cancer.com/9_9-Bland Chromatin">
+                                                    <j.0:Or>
+                                                      <rdf:Description rdf:about="http://breast-cancer.com/6_6-Bland Chromatin">
+                                                        <j.0:Or rdf:resource="http://breast-cancer.com/9_9-Bland Chromatin"/>
+                                                        <j.0:To
+                                                         rdf:datatype=
+                                                        "http://www.w3.org/2001/XMLSchema#int"
+                                                        >6</j.0:To>
+                                                        <j.0:From
+                                                         rdf:datatype=
+                                                        "http://www.w3.org/2001/XMLSchema#int"
+                                                        >6</j.0:From>
+                                                      </rdf:Description>
+                                                    </j.0:Or>
+                                                    <j.0:To rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#int"
+                                                    >9</j.0:To>
+                                                    <j.0:From
+                                                     rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#int"
+                                                    >9</j.0:From>
+                                                  </rdf:Description>
+                                                </j.0:Subsumption>
+                                                <j.0:Subsumption rdf:resource="http://breast-cancer.com/6_6-Bland Chromatin"/>
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Marginal Adhesion-Malignant"/>
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Bare Nuclei-Malignant"/>
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Malignant"/>
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Malignant"/>
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Clump Thickness-Malignant"/>
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Normal Nucleoli-Malignant"/>
+                                              </rdf:Description>
+                                            </j.0:And>
+                                            <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Malignant"/>
+                                            <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Malignant"/>
+                                            <j.0:Subsumption>
+                                              <rdf:Description rdf:about="http://breast-cancer.com/5_5-Normal Nucleoli">
+                                                <j.0:Or>
+                                                  <rdf:Description rdf:about="http://breast-cancer.com/7_7-Normal Nucleoli">
+                                                    <j.0:Or rdf:resource="http://breast-cancer.com/5_5-Normal Nucleoli"/>
+                                                    <j.0:To rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#int"
+                                                    >7</j.0:To>
+                                                    <j.0:From
+                                                     rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#int"
+                                                    >7</j.0:From>
+                                                  </rdf:Description>
+                                                </j.0:Or>
+                                                <j.0:To rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#int"
+                                                >5</j.0:To>
+                                                <j.0:From rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#int"
+                                                >5</j.0:From>
+                                              </rdf:Description>
+                                            </j.0:Subsumption>
+                                            <j.0:Subsumption rdf:resource="http://breast-cancer.com/7_7-Normal Nucleoli"/>
+                                          </rdf:Description>
+                                        </j.0:And>
+                                        <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Malignant"/>
+                                        <j.0:And rdf:resource="http://breast-cancer.com/Bland Chromatin-Malignant"/>
+                                        <j.0:And rdf:resource="http://breast-cancer.com/Clump Thickness-Malignant"/>
+                                      </rdf:Description>
+                                    </j.0:And>
+                                    <j.0:And rdf:resource="http://breast-cancer.com/Bland Chromatin-Malignant"/>
+                                    <j.0:And rdf:resource="http://breast-cancer.com/Normal Nucleoli-Malignant"/>
+                                    <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Malignant"/>
+                                    <j.0:Subsumption>
+                                      <rdf:Description rdf:about="http://breast-cancer.com/7_7-Marginal Adhesion">
+                                        <j.0:To rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#int"
+                                        >7</j.0:To>
+                                        <j.0:From rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#int"
+                                        >7</j.0:From>
+                                      </rdf:Description>
+                                    </j.0:Subsumption>
+                                  </rdf:Description>
+                                </j.0:And>
+                                <j.0:And rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Malignant"/>
+                                <j.0:And rdf:resource="http://breast-cancer.com/Bare Nuclei-Malignant"/>
+                                <j.0:And rdf:resource="http://breast-cancer.com/Bland Chromatin-Malignant"/>
+                                <j.0:And rdf:resource="http://breast-cancer.com/Normal Nucleoli-Malignant"/>
+                                <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Malignant"/>
+                                <j.0:Subsumption>
+                                  <rdf:Description rdf:about="http://breast-cancer.com/5_9-Uniformity of Cell Shape">
+                                    <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                    >9</j.0:To>
+                                    <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                    >5</j.0:From>
+                                  </rdf:Description>
+                                </j.0:Subsumption>
+                              </rdf:Description>
+                            </j.0:And>
+                            <j.0:And rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Malignant"/>
+                            <j.0:And rdf:resource="http://breast-cancer.com/Marginal Adhesion-Malignant"/>
+                            <j.0:And rdf:resource="http://breast-cancer.com/Normal Nucleoli-Malignant"/>
+                            <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Malignant"/>
+                            <j.0:And rdf:resource="http://breast-cancer.com/Bare Nuclei-Malignant"/>
+                            <j.0:And rdf:resource="http://breast-cancer.com/Bland Chromatin-Malignant"/>
+                            <j.0:Subsumption rdf:resource="http://breast-cancer.com/2_2-Clump Thickness"/>
+                          </rdf:Description>
+                        </j.0:And>
+                        <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Malignant"/>
+                        <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Malignant"/>
+                        <j.0:And rdf:resource="http://breast-cancer.com/Marginal Adhesion-Malignant"/>
+                        <j.0:And rdf:resource="http://breast-cancer.com/Bare Nuclei-Malignant"/>
+                        <j.0:And rdf:resource="http://breast-cancer.com/Bland Chromatin-Malignant"/>
+                        <j.0:And rdf:resource="http://breast-cancer.com/Normal Nucleoli-Malignant"/>
+                        <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Malignant"/>
+                        <j.0:Subsumption>
+                          <rdf:Description rdf:about="http://breast-cancer.com/8_8-Single Epithelial Cell Size">
+                            <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >8</j.0:To>
+                            <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >8</j.0:From>
+                          </rdf:Description>
+                        </j.0:Subsumption>
+                      </rdf:Description>
+                    </j.0:And>
+                    <j.0:And rdf:resource="http://breast-cancer.com/Bland Chromatin-Malignant"/>
+                    <j.0:And rdf:resource="http://breast-cancer.com/Clump Thickness-Malignant"/>
+                    <j.0:And rdf:resource="http://breast-cancer.com/Bare Nuclei-Malignant"/>
+                    <j.0:And rdf:resource="http://breast-cancer.com/Normal Nucleoli-Malignant"/>
+                    <j.0:And rdf:resource="http://breast-cancer.com/Marginal Adhesion-Malignant"/>
+                    <j.0:Subsumption rdf:resource="http://breast-cancer.com/7_7-Uniformity of Cell Size"/>
+                    <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Malignant"/>
+                  </rdf:Description>
+                </j.0:And>
+                <j.0:And rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Malignant"/>
+                <j.0:And rdf:resource="http://breast-cancer.com/Marginal Adhesion-Malignant"/>
+                <j.0:And rdf:resource="http://breast-cancer.com/Clump Thickness-Malignant"/>
+                <j.0:And rdf:resource="http://breast-cancer.com/Bare Nuclei-Malignant"/>
+                <j.0:And rdf:resource="http://breast-cancer.com/Bland Chromatin-Malignant"/>
+                <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Malignant"/>
+                <j.0:And rdf:resource="http://breast-cancer.com/Normal Nucleoli-Malignant"/>
+                <j.0:Subsumption>
+                  <rdf:Description rdf:about="http://breast-cancer.com/4_5-Mitoses">
+                    <j.0:Or>
+                      <rdf:Description rdf:about="http://breast-cancer.com/9_9-Mitoses">
+                        <j.0:Or rdf:resource="http://breast-cancer.com/4_5-Mitoses"/>
+                        <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >9</j.0:To>
+                        <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >9</j.0:From>
+                      </rdf:Description>
+                    </j.0:Or>
+                    <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                    >5</j.0:To>
+                    <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                    >4</j.0:From>
+                  </rdf:Description>
+                </j.0:Subsumption>
+                <j.0:Subsumption rdf:resource="http://breast-cancer.com/9_9-Mitoses"/>
+              </rdf:Description>
+            </j.0:Subsumption>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Normal Nucleoli-Malignant"/>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Bland Chromatin-Malignant"/>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Bare Nuclei-Malignant"/>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Malignant"/>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Marginal Adhesion-Malignant"/>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Malignant"/>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Malignant"/>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Clump Thickness-Malignant"/>
+          </rdf:Description>
+        </j.0:Subclass>
+        <j.0:Subclass>
+          <rdf:Description rdf:about="http://breast-cancer.com/Benign">
+            <j.0:Subsumption>
+              <rdf:Description rdf:about="http://breast-cancer.com/Mitoses-Benign">
+                <j.0:Subsumption>
+                  <rdf:Description rdf:about="http://breast-cancer.com/1_3-Mitoses">
+                    <j.0:Or>
+                      <rdf:Description rdf:about="http://breast-cancer.com/6_8-Mitoses">
+                        <j.0:Or rdf:resource="http://breast-cancer.com/1_3-Mitoses"/>
+                        <j.0:Or>
+                          <rdf:Description rdf:about="http://breast-cancer.com/10_10-Mitoses">
+                            <j.0:Or rdf:resource="http://breast-cancer.com/1_3-Mitoses"/>
+                            <j.0:Or rdf:resource="http://breast-cancer.com/6_8-Mitoses"/>
+                            <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >10</j.0:To>
+                            <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >10</j.0:From>
+                          </rdf:Description>
+                        </j.0:Or>
+                        <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >8</j.0:To>
+                        <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >6</j.0:From>
+                      </rdf:Description>
+                    </j.0:Or>
+                    <j.0:Or rdf:resource="http://breast-cancer.com/10_10-Mitoses"/>
+                    <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                    >3</j.0:To>
+                    <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                    >1</j.0:From>
+                  </rdf:Description>
+                </j.0:Subsumption>
+                <j.0:Subsumption rdf:resource="http://breast-cancer.com/6_8-Mitoses"/>
+                <j.0:And>
+                  <rdf:Description rdf:about="http://breast-cancer.com/Bland Chromatin-Benign">
+                    <j.0:Subsumption>
+                      <rdf:Description rdf:about="http://breast-cancer.com/10_10-Bland Chromatin">
+                        <j.0:Or>
+                          <rdf:Description rdf:about="http://breast-cancer.com/1_5-Bland Chromatin">
+                            <j.0:Or>
+                              <rdf:Description rdf:about="http://breast-cancer.com/7_8-Bland Chromatin">
+                                <j.0:Or rdf:resource="http://breast-cancer.com/1_5-Bland Chromatin"/>
+                                <j.0:Or rdf:resource="http://breast-cancer.com/10_10-Bland Chromatin"/>
+                                <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                >8</j.0:To>
+                                <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                >7</j.0:From>
+                              </rdf:Description>
+                            </j.0:Or>
+                            <j.0:Or rdf:resource="http://breast-cancer.com/10_10-Bland Chromatin"/>
+                            <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >5</j.0:To>
+                            <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >1</j.0:From>
+                          </rdf:Description>
+                        </j.0:Or>
+                        <j.0:Or rdf:resource="http://breast-cancer.com/7_8-Bland Chromatin"/>
+                        <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >10</j.0:To>
+                        <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >10</j.0:From>
+                      </rdf:Description>
+                    </j.0:Subsumption>
+                    <j.0:And>
+                      <rdf:Description rdf:about="http://breast-cancer.com/Uniformity of Cell Shape-Benign">
+                        <j.0:Subsumption>
+                          <rdf:Description rdf:about="http://breast-cancer.com/1_4-Uniformity of Cell Shape">
+                            <j.0:Or>
+                              <rdf:Description rdf:about="http://breast-cancer.com/10_10-Uniformity of Cell Shape">
+                                <j.0:Or rdf:resource="http://breast-cancer.com/1_4-Uniformity of Cell Shape"/>
+                                <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                >10</j.0:To>
+                                <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                >10</j.0:From>
+                              </rdf:Description>
+                            </j.0:Or>
+                            <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >4</j.0:To>
+                            <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >1</j.0:From>
+                          </rdf:Description>
+                        </j.0:Subsumption>
+                        <j.0:And>
+                          <rdf:Description rdf:about="http://breast-cancer.com/Bare Nuclei-Benign">
+                            <j.0:And>
+                              <rdf:Description rdf:about="http://breast-cancer.com/Marginal Adhesion-Benign">
+                                <j.0:Subsumption>
+                                  <rdf:Description rdf:about="http://breast-cancer.com/8_10-Marginal Adhesion">
+                                    <j.0:Or>
+                                      <rdf:Description rdf:about="http://breast-cancer.com/1_6-Marginal Adhesion">
+                                        <j.0:Or rdf:resource="http://breast-cancer.com/8_10-Marginal Adhesion"/>
+                                        <j.0:To rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#int"
+                                        >6</j.0:To>
+                                        <j.0:From rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#int"
+                                        >1</j.0:From>
+                                      </rdf:Description>
+                                    </j.0:Or>
+                                    <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                    >10</j.0:To>
+                                    <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                    >8</j.0:From>
+                                  </rdf:Description>
+                                </j.0:Subsumption>
+                                <j.0:And>
+                                  <rdf:Description rdf:about="http://breast-cancer.com/Single Epithelial Cell Size-Benign">
+                                    <j.0:And>
+                                      <rdf:Description rdf:about="http://breast-cancer.com/Clump Thickness-Benign">
+                                        <j.0:And rdf:resource="http://breast-cancer.com/Bland Chromatin-Benign"/>
+                                        <j.0:And rdf:resource="http://breast-cancer.com/Bare Nuclei-Benign"/>
+                                        <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Benign"/>
+                                        <j.0:Subsumption>
+                                          <rdf:Description rdf:about="http://breast-cancer.com/1_1-Clump Thickness">
+                                            <j.0:Or>
+                                              <rdf:Description rdf:about="http://breast-cancer.com/3_6-Clump Thickness">
+                                                <j.0:Or rdf:resource="http://breast-cancer.com/1_1-Clump Thickness"/>
+                                                <j.0:Or>
+                                                  <rdf:Description rdf:about="http://breast-cancer.com/8_8-Clump Thickness">
+                                                    <j.0:Or rdf:resource="http://breast-cancer.com/1_1-Clump Thickness"/>
+                                                    <j.0:Or rdf:resource="http://breast-cancer.com/3_6-Clump Thickness"/>
+                                                    <j.0:Or>
+                                                      <rdf:Description rdf:about="http://breast-cancer.com/10_10-Clump Thickness">
+                                                        <j.0:Or rdf:resource="http://breast-cancer.com/1_1-Clump Thickness"/>
+                                                        <j.0:Or rdf:resource="http://breast-cancer.com/3_6-Clump Thickness"/>
+                                                        <j.0:Or rdf:resource="http://breast-cancer.com/8_8-Clump Thickness"/>
+                                                        <j.0:To
+                                                         rdf:datatype=
+                                                        "http://www.w3.org/2001/XMLSchema#int"
+                                                        >10</j.0:To>
+                                                        <j.0:From
+                                                         rdf:datatype=
+                                                        "http://www.w3.org/2001/XMLSchema#int"
+                                                        >10</j.0:From>
+                                                      </rdf:Description>
+                                                    </j.0:Or>
+                                                    <j.0:To rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#int"
+                                                    >8</j.0:To>
+                                                    <j.0:From
+                                                     rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#int"
+                                                    >8</j.0:From>
+                                                  </rdf:Description>
+                                                </j.0:Or>
+                                                <j.0:Or rdf:resource="http://breast-cancer.com/10_10-Clump Thickness"/>
+                                                <j.0:To rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#int"
+                                                >6</j.0:To>
+                                                <j.0:From rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#int"
+                                                >3</j.0:From>
+                                              </rdf:Description>
+                                            </j.0:Or>
+                                            <j.0:Or rdf:resource="http://breast-cancer.com/8_8-Clump Thickness"/>
+                                            <j.0:Or rdf:resource="http://breast-cancer.com/10_10-Clump Thickness"/>
+                                            <j.0:To rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#int"
+                                            >1</j.0:To>
+                                            <j.0:From rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#int"
+                                            >1</j.0:From>
+                                          </rdf:Description>
+                                        </j.0:Subsumption>
+                                        <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Benign"/>
+                                        <j.0:And>
+                                          <rdf:Description rdf:about="http://breast-cancer.com/Normal Nucleoli-Benign">
+                                            <j.0:And rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Benign"/>
+                                            <j.0:And rdf:resource="http://breast-cancer.com/Bare Nuclei-Benign"/>
+                                            <j.0:Subsumption>
+                                              <rdf:Description rdf:about="http://breast-cancer.com/1_4-Normal Nucleoli">
+                                                <j.0:Or>
+                                                  <rdf:Description rdf:about="http://breast-cancer.com/6_6-Normal Nucleoli">
+                                                    <j.0:Or rdf:resource="http://breast-cancer.com/1_4-Normal Nucleoli"/>
+                                                    <j.0:Or>
+                                                      <rdf:Description rdf:about="http://breast-cancer.com/8_10-Normal Nucleoli">
+                                                        <j.0:Or rdf:resource="http://breast-cancer.com/1_4-Normal Nucleoli"/>
+                                                        <j.0:Or rdf:resource="http://breast-cancer.com/6_6-Normal Nucleoli"/>
+                                                        <j.0:To
+                                                         rdf:datatype=
+                                                        "http://www.w3.org/2001/XMLSchema#int"
+                                                        >10</j.0:To>
+                                                        <j.0:From
+                                                         rdf:datatype=
+                                                        "http://www.w3.org/2001/XMLSchema#int"
+                                                        >8</j.0:From>
+                                                      </rdf:Description>
+                                                    </j.0:Or>
+                                                    <j.0:To rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#int"
+                                                    >6</j.0:To>
+                                                    <j.0:From
+                                                     rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#int"
+                                                    >6</j.0:From>
+                                                  </rdf:Description>
+                                                </j.0:Or>
+                                                <j.0:Or rdf:resource="http://breast-cancer.com/8_10-Normal Nucleoli"/>
+                                                <j.0:To rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#int"
+                                                >4</j.0:To>
+                                                <j.0:From rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#int"
+                                                >1</j.0:From>
+                                              </rdf:Description>
+                                            </j.0:Subsumption>
+                                            <j.0:And rdf:resource="http://breast-cancer.com/Marginal Adhesion-Benign"/>
+                                            <j.0:And>
+                                              <rdf:Description rdf:about="http://breast-cancer.com/Uniformity of Cell Size-Benign">
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Marginal Adhesion-Benign"/>
+                                                <j.0:Subsumption>
+                                                  <rdf:Description rdf:about="http://breast-cancer.com/10_10-Uniformity of Cell Size">
+                                                    <j.0:Or>
+                                                      <rdf:Description rdf:about="http://breast-cancer.com/1_1-Uniformity of Cell Size">
+                                                        <j.0:Or>
+                                                          <rdf:Description rdf:about="http://breast-cancer.com/3_6-Uniformity of Cell Size">
+                                                            <j.0:Or rdf:resource="http://breast-cancer.com/1_1-Uniformity of Cell Size"/>
+                                                            <j.0:Or>
+                                                              <rdf:Description rdf:about="http://breast-cancer.com/8_8-Uniformity of Cell Size">
+    <j.0:Or rdf:resource="http://breast-cancer.com/1_1-Uniformity of Cell Size"/>
+    <j.0:Or rdf:resource="http://breast-cancer.com/3_6-Uniformity of Cell Size"/>
+    <j.0:Or rdf:resource="http://breast-cancer.com/10_10-Uniformity of Cell Size"/>
+    <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >8</j.0:To>
+    <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >8</j.0:From>                                             </rdf:Description>
+                                                            </j.0:Or>
+                                                            <j.0:Or rdf:resource="http://breast-cancer.com/10_10-Uniformity of Cell Size"/>
+                                                            <j.0:To
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#int"
+                                                            >6</j.0:To>
+                                                            <j.0:From
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#int"
+                                                            >3</j.0:From>
+                                                          </rdf:Description>
+                                                        </j.0:Or>
+                                                        <j.0:Or rdf:resource="http://breast-cancer.com/8_8-Uniformity of Cell Size"/>
+                                                        <j.0:Or rdf:resource="http://breast-cancer.com/10_10-Uniformity of Cell Size"/>
+                                                        <j.0:To
+                                                         rdf:datatype=
+                                                        "http://www.w3.org/2001/XMLSchema#int"
+                                                        >1</j.0:To>
+                                                        <j.0:From
+                                                         rdf:datatype=
+                                                        "http://www.w3.org/2001/XMLSchema#int"
+                                                        >1</j.0:From>
+                                                      </rdf:Description>
+                                                    </j.0:Or>
+                                                    <j.0:Or rdf:resource="http://breast-cancer.com/3_6-Uniformity of Cell Size"/>
+                                                    <j.0:Or rdf:resource="http://breast-cancer.com/8_8-Uniformity of Cell Size"/>
+                                                    <j.0:To rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#int"
+                                                    >10</j.0:To>
+                                                    <j.0:From
+                                                     rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#int"
+                                                    >10</j.0:From>
+                                                  </rdf:Description>
+                                                </j.0:Subsumption>
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Benign"/>
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Benign"/>
+                                                <j.0:Subsumption rdf:resource="http://breast-cancer.com/1_1-Uniformity of Cell Size"/>
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Bland Chromatin-Benign"/>
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Benign"/>
+                                                <j.0:Subsumption rdf:resource="http://breast-cancer.com/8_8-Uniformity of Cell Size"/>
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Bare Nuclei-Benign"/>
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Clump Thickness-Benign"/>
+                                                <j.0:Subsumption rdf:resource="http://breast-cancer.com/3_6-Uniformity of Cell Size"/>
+                                                <j.0:And rdf:resource="http://breast-cancer.com/Normal Nucleoli-Benign"/>
+                                              </rdf:Description>
+                                            </j.0:And>
+                                            <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Benign"/>
+                                            <j.0:And rdf:resource="http://breast-cancer.com/Bland Chromatin-Benign"/>
+                                            <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Benign"/>
+                                            <j.0:Subsumption rdf:resource="http://breast-cancer.com/6_6-Normal Nucleoli"/>
+                                            <j.0:Subsumption rdf:resource="http://breast-cancer.com/8_10-Normal Nucleoli"/>
+                                            <j.0:And rdf:resource="http://breast-cancer.com/Clump Thickness-Benign"/>
+                                          </rdf:Description>
+                                        </j.0:And>
+                                        <j.0:Subsumption rdf:resource="http://breast-cancer.com/3_6-Clump Thickness"/>
+                                        <j.0:And rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Benign"/>
+                                        <j.0:Subsumption rdf:resource="http://breast-cancer.com/10_10-Clump Thickness"/>
+                                        <j.0:And rdf:resource="http://breast-cancer.com/Marginal Adhesion-Benign"/>
+                                        <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Benign"/>
+                                        <j.0:Subsumption rdf:resource="http://breast-cancer.com/8_8-Clump Thickness"/>
+                                      </rdf:Description>
+                                    </j.0:And>
+                                    <j.0:And rdf:resource="http://breast-cancer.com/Bare Nuclei-Benign"/>
+                                    <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Benign"/>
+                                    <j.0:And rdf:resource="http://breast-cancer.com/Bland Chromatin-Benign"/>
+                                    <j.0:Subsumption>
+                                      <rdf:Description rdf:about="http://breast-cancer.com/9_10-Single Epithelial Cell Size">
+                                        <j.0:Or>
+                                          <rdf:Description rdf:about="http://breast-cancer.com/1_7-Single Epithelial Cell Size">
+                                            <j.0:Or rdf:resource="http://breast-cancer.com/9_10-Single Epithelial Cell Size"/>
+                                            <j.0:To rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#int"
+                                            >7</j.0:To>
+                                            <j.0:From rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#int"
+                                            >1</j.0:From>
+                                          </rdf:Description>
+                                        </j.0:Or>
+                                        <j.0:To rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#int"
+                                        >10</j.0:To>
+                                        <j.0:From rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#int"
+                                        >9</j.0:From>
+                                      </rdf:Description>
+                                    </j.0:Subsumption>
+                                    <j.0:And rdf:resource="http://breast-cancer.com/Marginal Adhesion-Benign"/>
+                                    <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Benign"/>
+                                    <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Benign"/>
+                                    <j.0:And rdf:resource="http://breast-cancer.com/Normal Nucleoli-Benign"/>
+                                    <j.0:Subsumption rdf:resource="http://breast-cancer.com/1_7-Single Epithelial Cell Size"/>
+                                  </rdf:Description>
+                                </j.0:And>
+                                <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Benign"/>
+                                <j.0:Subsumption rdf:resource="http://breast-cancer.com/1_6-Marginal Adhesion"/>
+                                <j.0:And rdf:resource="http://breast-cancer.com/Bland Chromatin-Benign"/>
+                                <j.0:And rdf:resource="http://breast-cancer.com/Normal Nucleoli-Benign"/>
+                                <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Benign"/>
+                                <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Benign"/>
+                                <j.0:And rdf:resource="http://breast-cancer.com/Bare Nuclei-Benign"/>
+                                <j.0:And rdf:resource="http://breast-cancer.com/Clump Thickness-Benign"/>
+                              </rdf:Description>
+                            </j.0:And>
+                            <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Benign"/>
+                            <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Benign"/>
+                            <j.0:And rdf:resource="http://breast-cancer.com/Bland Chromatin-Benign"/>
+                            <j.0:Subsumption>
+                              <rdf:Description rdf:about="http://breast-cancer.com/7_10-Bare Nuclei">
+                                <j.0:Or>
+                                  <rdf:Description rdf:about="http://breast-cancer.com/1_1-Bare Nuclei">
+                                    <j.0:Or>
+                                      <rdf:Description rdf:about="http://breast-cancer.com/3_5-Bare Nuclei">
+                                        <j.0:Or rdf:resource="http://breast-cancer.com/1_1-Bare Nuclei"/>
+                                        <j.0:Or rdf:resource="http://breast-cancer.com/7_10-Bare Nuclei"/>
+                                        <j.0:To rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#int"
+                                        >5</j.0:To>
+                                        <j.0:From rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#int"
+                                        >3</j.0:From>
+                                      </rdf:Description>
+                                    </j.0:Or>
+                                    <j.0:Or rdf:resource="http://breast-cancer.com/7_10-Bare Nuclei"/>
+                                    <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                    >1</j.0:To>
+                                    <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                    >1</j.0:From>
+                                  </rdf:Description>
+                                </j.0:Or>
+                                <j.0:Or rdf:resource="http://breast-cancer.com/3_5-Bare Nuclei"/>
+                                <j.0:To rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                >10</j.0:To>
+                                <j.0:From rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                >7</j.0:From>
+                              </rdf:Description>
+                            </j.0:Subsumption>
+                            <j.0:And rdf:resource="http://breast-cancer.com/Clump Thickness-Benign"/>
+                            <j.0:Subsumption rdf:resource="http://breast-cancer.com/3_5-Bare Nuclei"/>
+                            <j.0:And rdf:resource="http://breast-cancer.com/Normal Nucleoli-Benign"/>
+                            <j.0:Subsumption rdf:resource="http://breast-cancer.com/1_1-Bare Nuclei"/>
+                            <j.0:And rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Benign"/>
+                            <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Benign"/>
+                          </rdf:Description>
+                        </j.0:And>
+                        <j.0:And rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Benign"/>
+                        <j.0:And rdf:resource="http://breast-cancer.com/Normal Nucleoli-Benign"/>
+                        <j.0:Subsumption rdf:resource="http://breast-cancer.com/10_10-Uniformity of Cell Shape"/>
+                        <j.0:And rdf:resource="http://breast-cancer.com/Bland Chromatin-Benign"/>
+                        <j.0:And rdf:resource="http://breast-cancer.com/Marginal Adhesion-Benign"/>
+                        <j.0:And rdf:resource="http://breast-cancer.com/Clump Thickness-Benign"/>
+                        <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Benign"/>
+                        <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Benign"/>
+                      </rdf:Description>
+                    </j.0:And>
+                    <j.0:And rdf:resource="http://breast-cancer.com/Mitoses-Benign"/>
+                    <j.0:And rdf:resource="http://breast-cancer.com/Normal Nucleoli-Benign"/>
+                    <j.0:Subsumption rdf:resource="http://breast-cancer.com/1_5-Bland Chromatin"/>
+                    <j.0:And rdf:resource="http://breast-cancer.com/Marginal Adhesion-Benign"/>
+                    <j.0:And rdf:resource="http://breast-cancer.com/Clump Thickness-Benign"/>
+                    <j.0:Subsumption rdf:resource="http://breast-cancer.com/7_8-Bland Chromatin"/>
+                    <j.0:And rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Benign"/>
+                    <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Benign"/>
+                    <j.0:And rdf:resource="http://breast-cancer.com/Bare Nuclei-Benign"/>
+                  </rdf:Description>
+                </j.0:And>
+                <j.0:Subsumption rdf:resource="http://breast-cancer.com/10_10-Mitoses"/>
+                <j.0:And rdf:resource="http://breast-cancer.com/Clump Thickness-Benign"/>
+                <j.0:And rdf:resource="http://breast-cancer.com/Bare Nuclei-Benign"/>
+                <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Benign"/>
+                <j.0:And rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Benign"/>
+                <j.0:And rdf:resource="http://breast-cancer.com/Marginal Adhesion-Benign"/>
+                <j.0:And rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Benign"/>
+                <j.0:And rdf:resource="http://breast-cancer.com/Normal Nucleoli-Benign"/>
+              </rdf:Description>
+            </j.0:Subsumption>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Normal Nucleoli-Benign"/>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Bland Chromatin-Benign"/>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Bare Nuclei-Benign"/>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Single Epithelial Cell Size-Benign"/>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Marginal Adhesion-Benign"/>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Uniformity of Cell Shape-Benign"/>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Uniformity of Cell Size-Benign"/>
+            <j.0:Subsumption rdf:resource="http://breast-cancer.com/Clump Thickness-Benign"/>
+          </rdf:Description>
+        </j.0:Subclass>
+      </rdf:Description>
+    </vcard:CLASS>
+  </rdf:Description>
+</rdf:RDF>

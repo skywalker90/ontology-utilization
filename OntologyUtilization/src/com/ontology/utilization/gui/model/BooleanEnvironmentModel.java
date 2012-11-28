@@ -21,6 +21,8 @@ import com.ontology.utilization.domain.genetic.algorithm.selection.BooleanSelect
 import com.ontology.utilization.gui.controller.DefaultController;
 
 public class BooleanEnvironmentModel extends AbstractModel {
+	private static final double DEFAULT_THRESHOLD = 0.5;
+	
 	private List<BooleanPatient> patients;
 	private boolean isMalignatRule;
 	private int sizeOfInitialPopulation; // zakres od 100 - 1000
@@ -46,7 +48,35 @@ public class BooleanEnvironmentModel extends AbstractModel {
 	private String mutationMethod;
 	private String crossoverMethod;
 
+	private void fireAll(){
+		setSizeOfInitialPopulationMax(-1);
+		setSizeOfInitialPopulationMin(-1);
+		setSizeOfInitialPopulation(-1);
+
+		setSizeOfStandardPopulationMax(-1);
+		setSizeOfStandardPopulationMin(-1);
+		setSizeOfStandardPopulation(-1);
+
+		setProbabilityOfCrossoverMax(-1);
+		setProbabilityOfCrossoverMin(-1);
+		setProbabilityOfCrossover(-1);
+
+		setProbabilityOfMutationMax(-1);
+		setProbabilityOfMutationMin(-1);
+		setProbabilityOfMutation(-1);
+
+		setThresholdMax(-1);
+		setThresholdMin(-1);
+		setThreshold(-1);
+
+		setIterationMax(-1);
+		setIterationMin(-1);
+		setIteration(-1);
+	}
+	
 	public void initDefaults() {
+		fireAll();
+		
 		setMalignatRule(true);
 
 		setSizeOfInitialPopulationMax(1000);
@@ -137,6 +167,7 @@ public class BooleanEnvironmentModel extends AbstractModel {
 
 	public void setIteration(Integer iteration) {
 		Integer olditeration = this.iteration;
+		iteration = Math.min(getIterationMax(), Math.max(getIterationMin(), iteration));
 		this.iteration = iteration;
 		firePropertyChange(DefaultController.ELEMENT_iteration_PROPERTY, olditeration, iteration);
 	}
@@ -280,6 +311,7 @@ public class BooleanEnvironmentModel extends AbstractModel {
 		List<BooleanPatient> oldpatients = this.patients;
 		if (patients != null) {
 			setThresholdMax(patients.size());
+			setThreshold((int)(patients.size()*DEFAULT_THRESHOLD));
 		}
 		this.patients = patients;
 		firePropertyChange(DefaultController.ELEMENT_patients_PROPERTY, oldpatients, patients);
